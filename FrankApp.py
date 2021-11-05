@@ -232,13 +232,13 @@ def main():
     st.subheader(
         '8a. By Subjectivity (columns represent increasing subjectivity 0 - 10)')
     st.write(corr_by_subjectivity(
-        matched[matched['userGroup']="FrankKeyboard"], emotions_txt, emotions_svy).astype('object'))
+        matched[matched['userGroup']=="FrankKeyboard"], emotions_txt, emotions_svy).astype('object'))
     st.subheader(
         '8b. By Polarity (columns represent increasing sentiment -1.0 to 1.0)')
-    st.write(corr_by_polarity(matched[matched['userGroup']="FrankKeyboard"], emotions_txt,
+    st.write(corr_by_polarity(matched[matched['userGroup']=="FrankKeyboard"], emotions_txt,
              emotions_svy).astype('object'))
     st.subheader('8c. By Word Count (columns represent increasing word count)')
-    st.write(corr_by_words(matched[matched['userGroup']="FrankKeyboard"], emotions_txt, emotions_svy).astype('object'))
+    st.write(corr_by_words(matched[matched['userGroup']=="FrankKeyboard"], emotions_txt, emotions_svy).astype('object'))
     
     st.write('---')
 
@@ -249,13 +249,13 @@ def main():
     st.subheader(
         '9a. By Subjectivity (columns represent increasing subjectivity 0 - 10)')
     st.write(corr_by_subjectivity(
-        matched[matched['userGroup']="Frank"], emotions_txt, emotions_svy).astype('object'))
+        matched[matched['userGroup']=="Frank"], emotions_txt, emotions_svy).astype('object'))
     st.subheader(
         '9b. By Polarity (columns represent increasing sentiment -1.0 to 1.0)')
-    st.write(corr_by_polarity(matched[matched['userGroup']="Frank"], emotions_txt,
+    st.write(corr_by_polarity(matched[matched['userGroup']=="Frank"], emotions_txt,
              emotions_svy).astype('object'))
     st.subheader('9c. By Word Count (columns represent increasing word count)')
-    st.write(corr_by_words(matched[matched['userGroup']="Frank"], emotions_txt, emotions_svy).astype('object'))
+    st.write(corr_by_words(matched[matched['userGroup']=="Frank"], emotions_txt, emotions_svy).astype('object'))
     
     st.write('---')
 
@@ -266,13 +266,13 @@ def main():
     st.subheader(
         '10a. By Subjectivity (columns represent increasing subjectivity 0 - 10)')
     st.write(corr_by_subjectivity(
-        matched[matched['userGroup']="Keyboard"], emotions_txt, emotions_svy).astype('object'))
+        matched[matched['userGroup']=="Keyboard"], emotions_txt, emotions_svy).astype('object'))
     st.subheader(
         '10b. By Polarity (columns represent increasing sentiment -1.0 to 1.0)')
-    st.write(corr_by_polarity(matched[matched['userGroup']="Keyboard"], emotions_txt,
+    st.write(corr_by_polarity(matched[matched['userGroup']=="Keyboard"], emotions_txt,
              emotions_svy).astype('object'))
     st.subheader('10c. By Word Count (columns represent increasing word count)')
-    st.write(corr_by_words(matched[matched['userGroup']="Keyboard"], emotions_txt, emotions_svy).astype('object'))
+    st.write(corr_by_words(matched[matched['userGroup']=="Keyboard"], emotions_txt, emotions_svy).astype('object'))
     
 if __name__ == "__main__":
     main()
