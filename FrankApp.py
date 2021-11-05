@@ -175,6 +175,8 @@ def main():
     # Comparison of tertile membership
     st.header('6. Membership in Low/Medium/High groups (Algorithm vs. Survey)')
 
+    st.subheader('---- AMONG ALL ----')
+    
     col1, col2, col3 = st.beta_columns(3)
 
     with col1:
@@ -204,6 +206,111 @@ def main():
         st.subheader('6e. Disgust')
         disgust = consistency_counts(
             matched, 'txt_Disgust_rank_grp', 'Disgust_rank_grp')
+        st.write(disgust.astype('object'))
+
+    st.write('---')
+    
+    st.subheader('---- AMONG FRANK+KEYBOARD ----')
+    
+    col1, col2, col3 = st.beta_columns(3)
+
+    with col1:
+        st.subheader('6a. Anger')
+        anger = consistency_counts(
+            matched[matched['userGroup']=="FrankKeyboard"], 'txt_Anger_rank_grp', 'Anger_rank_grp')
+        st.write(anger.astype('object'))
+    with col2:
+        st.subheader('6b. Sadness')
+        sad = consistency_counts(
+            matched[matched['userGroup']=="FrankKeyboard"], 'txt_Sadness_rank_grp', 'Sadness_rank_grp')
+        st.write(sad.astype('object'))
+    with col3:
+        st.subheader('6c. Fear')
+        fear = consistency_counts(
+            matched[matched['userGroup']=="FrankKeyboard"], 'txt_Fear_rank_grp', 'Fear_rank_grp')
+        st.write(fear.astype('object'))
+
+    col1, col2, col3 = st.beta_columns(3)
+
+    with col1:
+        st.subheader('6d. Joy')
+        joy = consistency_counts(
+            matched[matched['userGroup']=="FrankKeyboard"], 'txt_Joy_rank_grp', 'Joy_rank_grp')
+        st.write(joy.astype('object'))
+    with col2:
+        st.subheader('6e. Disgust')
+        disgust = consistency_counts(
+            matched[matched['userGroup']=="FrankKeyboard"], 'txt_Disgust_rank_grp', 'Disgust_rank_grp')
+        st.write(disgust.astype('object'))
+
+    st.write('---')
+    
+    st.subheader('---- AMONG FRANK ----')
+    
+    col1, col2, col3 = st.beta_columns(3)
+
+    with col1:
+        st.subheader('6a. Anger')
+        anger = consistency_counts(
+            matched[matched['userGroup']=="Frank"], 'txt_Anger_rank_grp', 'Anger_rank_grp')
+        st.write(anger.astype('object'))
+    with col2:
+        st.subheader('6b. Sadness')
+        sad = consistency_counts(
+            matched[matched['userGroup']=="Frank"], 'txt_Sadness_rank_grp', 'Sadness_rank_grp')
+        st.write(sad.astype('object'))
+    with col3:
+        st.subheader('6c. Fear')
+        fear = consistency_counts(
+            matched[matched['userGroup']=="Frank"], 'txt_Fear_rank_grp', 'Fear_rank_grp')
+        st.write(fear.astype('object'))
+
+    col1, col2, col3 = st.beta_columns(3)
+
+    with col1:
+        st.subheader('6d. Joy')
+        joy = consistency_counts(
+            matched[matched['userGroup']=="Frank"], 'txt_Joy_rank_grp', 'Joy_rank_grp')
+        st.write(joy.astype('object'))
+    with col2:
+        st.subheader('6e. Disgust')
+        disgust = consistency_counts(
+            matched[matched['userGroup']=="Frank"], 'txt_Disgust_rank_grp', 'Disgust_rank_grp')
+        st.write(disgust.astype('object'))
+
+    st.write('---')
+    
+    st.subheader('---- AMONG KEYBOARD ----')
+    
+    col1, col2, col3 = st.beta_columns(3)
+
+    with col1:
+        st.subheader('6a. Anger')
+        anger = consistency_counts(
+            matched[matched['userGroup']=="Keyboard"], 'txt_Anger_rank_grp', 'Anger_rank_grp')
+        st.write(anger.astype('object'))
+    with col2:
+        st.subheader('6b. Sadness')
+        sad = consistency_counts(
+            matched[matched['userGroup']=="Keyboard"], 'txt_Sadness_rank_grp', 'Sadness_rank_grp')
+        st.write(sad.astype('object'))
+    with col3:
+        st.subheader('6c. Fear')
+        fear = consistency_counts(
+            matched[matched['userGroup']=="Keyboard"], 'txt_Fear_rank_grp', 'Fear_rank_grp')
+        st.write(fear.astype('object'))
+
+    col1, col2, col3 = st.beta_columns(3)
+
+    with col1:
+        st.subheader('6d. Joy')
+        joy = consistency_counts(
+            matched[matched['userGroup']=="Keyboard"], 'txt_Joy_rank_grp', 'Joy_rank_grp')
+        st.write(joy.astype('object'))
+    with col2:
+        st.subheader('6e. Disgust')
+        disgust = consistency_counts(
+            matched[matched['userGroup']=="Keyboard"], 'txt_Disgust_rank_grp', 'Disgust_rank_grp')
         st.write(disgust.astype('object'))
 
     st.write('---')
